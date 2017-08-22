@@ -20,7 +20,13 @@
 </template>
 
 <script>
+import Logger from '../services/logger';
+
 export default {
+  beforeMount() {
+    const logger = new Logger();
+    logger.log('testing', 'Error');
+  },
   name: 'hello',
   data() {
     return {
